@@ -1,7 +1,7 @@
 provider "google-beta" {}
 
 resource "google_container_cluster" "this" {
-  provider = google-beta
+  provider = "google-beta"
   name     = "this-cluster"
   location = "australia-southeast1"
 
@@ -21,7 +21,7 @@ resource "google_container_cluster" "this" {
   # 7.2 Ensure Stackdriver Monitoring is set to Enabled on Kubernetes Engine Clusters
   # NOTE: Can also be monitoring.googleapis.com
   #
-  monitoring_service = "monitoring.googleapis.com/kubernetes"
+  # monitoring_service = "monitoring.googleapis.com/kubernetes"
 
   #
   # 7.3 Ensure Legacy Authorization is set to Disabled on Kubernetes Engine Clusters
