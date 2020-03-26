@@ -26,7 +26,7 @@ resource "google_container_cluster" "this" {
   #
   # 7.3 Ensure Legacy Authorization is set to Disabled on Kubernetes Engine Clusters
   #
-  #  enable_legacy_abac = false
+  enable_legacy_abac = true
 
   #
   # 7.4 Ensure Master authorized networks is set to Enabled on Kubernetes Engine Clusters
