@@ -1,3 +1,5 @@
+variable "failure" {}
+
 provider "google-beta" {}
 
 resource "google_container_cluster" "this" {
@@ -26,7 +28,7 @@ resource "google_container_cluster" "this" {
   #
   # 7.3 Ensure Legacy Authorization is set to Disabled on Kubernetes Engine Clusters
   #
-  enable_legacy_abac = true
+  enable_legacy_abac = var.failure
 
   #
   # 7.4 Ensure Master authorized networks is set to Enabled on Kubernetes Engine Clusters
